@@ -14,7 +14,9 @@
         "alias": {
           "@config": "./config",
           "@models": "./src/models",
-          "@libs": "./src/libs"
+          "@libs": "./src/libs",
+          "@typeDefs": "./src/graphql/types",
+          "@resolvers": "./src/graphql/resolvers"
         }
       }]
     ]

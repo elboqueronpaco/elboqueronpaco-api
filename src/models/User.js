@@ -1,4 +1,4 @@
-
+import { encrypt } from '@libs'
 
 export default (sequlize, { BOOLEAN, STRING, UUID, UUIDV4 }) => {
     const User =  sequlize.define('User', {
@@ -54,6 +54,14 @@ export default (sequlize, { BOOLEAN, STRING, UUID, UUIDV4 }) => {
             alloNull: false,
             defaultValue: false
         }
-    })
+    },
+    {
+        hooks: {
+            beforeCreate: user => {
+                user.password = encrypt(user.password)
+            }
+        }
+    }
+    )
      return User
 }

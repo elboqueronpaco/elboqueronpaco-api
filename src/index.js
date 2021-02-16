@@ -6,25 +6,10 @@ import { $server } from '@config'
 const port = process.env.PORT || $server().port
 
 // Type Definitions
-const typeDefs = `
-  type Hello {
-    message: String!
-  }
-  type Query {
-    sayHello(name: String!): Hello
-  }   
-`
+import typeDefs from '@typeDefs'
 
 //Resolvers
-const resolvers = {
-  Query: {
-    sayHello: (_, args) =>{
-      return {
-        message: `Hello ${args.name} || 'world'`
-      }
-    }
-  }
-}
+import resolvers from '@resolvers'
 
 //Schema
 const schema = makeExecutableSchema({
