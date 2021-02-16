@@ -1,0 +1,17 @@
+{
+    "server": {
+        "port": 5000
+    },
+    "db": {
+        "dialect": "postgres",
+        "port": 5432,
+        "host": "localhost",
+        "database": "elboqueronpaco",
+        "username": "postgres",
+        "password": "Ocap_5791"
+    },
+    "security": {
+        "secretKey":"31boqu3r0np4c04pi",
+        "expiresIn": "7d"
+    }
+}
