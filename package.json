@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js --ext js,graphl --exec babel-node"
+    "dev": "nodemon src/index.js --ext js,graphl --exec babel-node",
+    "start": "cross-env NODE_ENV=production babel-node src/server.js"
   },
   "repository": "https://github.com/elboqueronpaco/elboqueronpaco-api.git",
   "author": "elboqueronpaco <elboqueronpaco@gmail.com>",
@@ -13,6 +14,7 @@
     "@babel/node": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
     "babel-plugin-module-resolver": "^4.1.0",
+    "cross-env": "^7.0.3",
     "husky": "^5.0.9",
     "jest": "^26.6.3",
     "nodemon": "^2.0.7",
